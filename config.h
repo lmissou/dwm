@@ -83,6 +83,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-combi-modi", "window,drun", "-show", "combi" };
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *lockcmd[]  = { "i3lock-fancy", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
 static const char scratchpadname[] = "scratchpad";
@@ -95,6 +96,7 @@ static Key keys[] = {
 	/* modifier            key                      function        argument */
 	{ MODKEY,              XK_p,                    spawn,          {.v = dmenucmd } },
 	{ MODKEY,              XK_Return,               spawn,          {.v = termcmd } },
+	{ MODKEY|ControlMask,  XK_l,                    spawn,          {.v = lockcmd } },
 	{ MODKEY,              XK_c,                    spawn,          {.v = browsercmd } },
 	{ 0,                   XK_Print,                spawn,          {.v = screenshotcmd } },
 	{ MODKEY,              XK_b,                    togglebar,      {0} },
