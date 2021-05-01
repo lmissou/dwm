@@ -86,7 +86,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-g", "80x24", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL };// "-g", "80x24", NULL };
 
 static const char *setqwertycmd[]  = { "/home/david/scripts/setxmodmap-qwerty.sh", NULL };
 static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
@@ -113,7 +113,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,    XK_h,                    incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,    XK_l,                    incnmaster,     {.i = -1 } },
     { MODKEY,              XK_n,                    hidewin,        {0} },
-	//{ MODKEY|ShiftMask,    XK_k,                    restorewin,     {0} },
+	{ MODKEY|ShiftMask,    XK_n,                    restorewin,     {0} },
 	{ MODKEY,              XK_o,                    hideotherwins,  {0}},
 	{ MODKEY|ShiftMask,    XK_o,                    restoreotherwins, {0}},
 	{ MODKEY|ShiftMask,    XK_Return,               zoom,           {0} },
@@ -125,7 +125,7 @@ static Key keys[] = {
 	{ MODKEY,              XK_space,                setlayout,      {0} },
 	{ MODKEY|ShiftMask,    XK_space,                togglefloating, {0} },
 	{ MODKEY|ShiftMask,    XK_f,                    fullscreen,  {0} },
-	//{ MODKEY,              XK_apostrophe,           togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,              XK_apostrophe,           togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,              XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,    XK_0,                    tag,            {.ui = ~0 } },
 	{ MODKEY,              XK_comma,                focusmon,       {.i = -1 } },
