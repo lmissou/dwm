@@ -83,8 +83,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-combi-modi", "window,drun", "-show", "combi" };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *lockcmd[]  = { "dm-tool", "lock", NULL };
-static const char *browsercmd[]  = { "firefox", NULL };//{ "google-chrome-stable", NULL };
+static const char *lockcmd[]  = { "i3lock-fancy", NULL };//{ "dm-tool", "lock", NULL };
+static const char *browsercmd[]  = { "google-chrome-stable", NULL };//{ "google-chrome-stable", NULL };
 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL };// "-g", "80x24", NULL };
